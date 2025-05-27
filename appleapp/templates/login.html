@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin - Apple WiFi</h1>
+        <p>Total Vouchers: {{ total }} | Active: {{ active }} | Expired: {{ expired }}</p>
+        <form method="POST">
+            <input type="text" name="code" placeholder="Voucher Code" required>
+            <input type="date" name="start_date" required>
+            <select name="type">
+                <option>15 days</option>
+                <option>30 days</option>
+            </select>
+            <button type="submit">Add Voucher</button>
+        </form>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>

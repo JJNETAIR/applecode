@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apple WiFi - Voucher Check</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Apple WiFi</h1>
+        <h2>Voucher Validity Check</h2>
+        <form method="POST">
+            <input type="text" name="code" placeholder="Enter voucher code" required>
+            <button type="submit">Check</button>
+        </form>
+        {% if message %}
+            <p class="{{ 'success' if status == 'valid' else 'error' }}">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
